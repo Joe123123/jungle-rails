@@ -1,2 +1,8 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>There are 
+  <a href='/admin/products' > 
+    <%= pluralize @categories.size, 'category' %>
+    and 
+    <%= pluralize @products.size, 'product' %> 
+  </a> 
+  in the store.
+</h1>
