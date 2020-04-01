@@ -5,8 +5,8 @@
   </header>
 
   <% if enhanced_cart.empty? %>
-    <div class="alert alert-primary" role="alert">
-      Your cart is empty! Start shopping <%= link_to 'HERE', root_path %>!
+    <div class="alert alert-info" role="alert">
+      Your cart is empty! Start shopping <%= link_to 'HERE', root_path , class: 'alert-link' %>!
     </div>
   <% else %>
 
