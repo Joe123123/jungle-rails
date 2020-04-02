@@ -30,7 +30,8 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-      <% if session[:user_email] %>
+      <%# if session[:user_email] %>
+      <% if in_user_session? %>
         <li>
           <p class="navbar-text"><%= session[:user_email] %></p>
         </li>
