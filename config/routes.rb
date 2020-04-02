@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
 
   resources :orders, only: %i[create show]
+  resources :users
 
   namespace :admin do
     root to: 'dashboard#show'
