@@ -6,11 +6,11 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 Home page
 
-!["Home"](app/assets/images/home-page.png)
+!["Home"](https://github.com/Joe123123/jungle-rails/blob/master/app/assets/images/home-page.png)
 
 Cart
 
-!["Cart"](app/assets/images/cart.png)
+!["Cart"](https://github.com/Joe123123/jungle-rails/blob/master/app/assets/images/cart.png)
 
 ## Setup
 
