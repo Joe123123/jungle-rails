@@ -3,17 +3,32 @@
 class SessionsController < ApplicationController
   def new; end
 
+  # def create
+  #   @user = User.find_by_email(params['/login'][:email])
+  #   # If the user exists AND the password entered is correct.
+  #   if @user&.authenticate(params['/login'][:password])
+  #     # Save the user id inside the browser cookie. This is how we keep the user
+  #     # logged in when they navigate around our website.
+  #     session[:user_email] = @user[:email]
+  #     redirect_to :root
+  #   else
+  #     # If user's login doesn't work, send them back to the login form.
+  #     redirect_to login_path
+  #   end
+  # end
+
   def create
-    @user = User.find_by_email(params['/login'][:email])
-    # If the user exists AND the password entered is correct.
-    if @user&.authenticate(params['/login'][:password])
-      # Save the user id inside the browser cookie. This is how we keep the user
-      # logged in when they navigate around our website.
+    @user = User.authenticate_with_credentials(params['/login'][:email], params['/login'][:password])
+
+    if @user
+      # success logic, log them in
       session[:user_email] = @user[:email]
       redirect_to :root
+
     else
-      # If user's login doesn't work, send them back to the login form.
+      # failure, render login form
       redirect_to login_path
+
     end
   end
 
