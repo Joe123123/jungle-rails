@@ -1,10 +1,8 @@
 <div class="alert alert-info" role="alert">
   <h1>There are 
-    <a href='/admin/products' class='alert-link' > 
-      <%= pluralize @categories.size, 'category' %>
-      and 
-      <%= pluralize @products.size, 'product' %> 
-    </a> 
+    <%= link_to  pluralize(@categories.size, 'category'), admin_categories_path %>
+    and
+    <%= link_to  pluralize(@products.size, 'product'), admin_products_path %>
     in the store.
   </h1>
 </div>
